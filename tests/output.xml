@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.8.8 on win32)" generated="20211213 19:11:20.588" rpa="false" schemaversion="2">
+<suite id="s1" name="Zasort" source="E:\Users\Ivan\Documents\School_Doc\College\STSWENG\robot\saucedemorobot\tests\zasort.robot">
+<test id="s1-t1" name="AZSort">
+<kw name="Open Browser To Login Page" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211213 19:11:20.868" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20211213 19:11:20.868" endtime="20211213 19:11:22.511"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211213 19:11:22.511" endtime="20211213 19:11:22.633"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211213 19:11:22.647" level="INFO">Current page contains element 'login-button'.</msg>
+<status status="PASS" starttime="20211213 19:11:22.633" endtime="20211213 19:11:22.647"/>
+</kw>
+<status status="PASS" starttime="20211213 19:11:20.867" endtime="20211213 19:11:22.647"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${VALID USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 19:11:22.648" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20211213 19:11:22.648" endtime="20211213 19:11:22.756"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 19:11:22.756" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20211213 19:11:22.795" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211213 19:11:22.847" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211213 19:11:22.756" endtime="20211213 19:11:22.847"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211213 19:11:22.848" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20211213 19:11:22.848" endtime="20211213 19:11:22.980"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>css=*[data-test="product_sort_container"]</arg>
+<arg>lohi</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20211213 19:11:22.981" level="INFO">Selecting options from selection list 'css=*[data-test="product_sort_container"]' by value lohi.</msg>
+<status status="PASS" starttime="20211213 19:11:22.981" endtime="20211213 19:11:23.250"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>css=*[data-test="product_sort_container"]</arg>
+<arg>lohi</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20211213 19:11:23.251" level="INFO">Verifying list 'css=*[data-test="product_sort_container"]' has option [ lohi ] selected.</msg>
+<msg timestamp="20211213 19:11:23.261" level="INFO">Current page contains list 'css=*[data-test="product_sort_container"]'.</msg>
+<status status="PASS" starttime="20211213 19:11:23.250" endtime="20211213 19:11:23.349"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211213 19:11:23.350" endtime="20211213 19:11:25.549"/>
+</kw>
+<status status="PASS" starttime="20211213 19:11:20.866" endtime="20211213 19:11:25.549"/>
+</test>
+<doc>A test suite with a single test for sorting z to a
+
+This test follows the example using keywords
+from the selenium library</doc>
+<status status="PASS" starttime="20211213 19:11:20.591" endtime="20211213 19:11:25.551"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Zasort">Zasort</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
