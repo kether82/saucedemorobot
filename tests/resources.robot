@@ -10,6 +10,7 @@ ${BROWSER}            chrome
 ${DELAY}              0
 ${VALID USER}         standard_user
 ${LOCKED OUT USER}    locked_out_user
+${PROBLEM USER}       problem_user
 ${VALID PASSWORD}     secret_sauce
 ${LOGIN URL}          https://${SERVER}/
 ${HOME URL}           https://${SERVER}/inventory.html

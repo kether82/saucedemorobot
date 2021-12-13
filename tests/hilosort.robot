@@ -1,12 +1,12 @@
 *** Settings ***
-Documentation  A test suite with a single test for valid login 
+Documentation  A test suite with a single test for sorting low to hi
 ...
 ...            This test follows the example using keywords 
 ...            from the selenium library
 
 Resource        resources.robot
 *** Test Cases ***
-Valid Login
+LohiSort
     Open Browser To Login Page 
     # input username
     Input Text    user-name    ${VALID USER}
@@ -14,10 +14,11 @@ Valid Login
     Input Password    password    ${VALID PASSWORD}
     # click login button
     Click Button    login-button
-    # should be open in products page
-    Element Text Should Be    class:title    PRODUCTS
+    # change select
+    Select From List By Value  css=*[data-test="product_sort_container"]    hilo
+    # assert value
+    List Selection Should Be  css=*[data-test="product_sort_container"]  hilo
+
+
     # close browser
     [Teardown]    Close Browser
-
-
-
