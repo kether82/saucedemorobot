@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.8.8 on win32)" generated="20211213 17:34:57.316" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="E:\Users\Ivan\Documents\School_Doc\College\STSWENG\robot\saucedemorobot\tests">
+<suite id="s1-s1" name="Valid Login" source="E:\Users\Ivan\Documents\School_Doc\College\STSWENG\robot\saucedemorobot\tests\valid_login.robot">
+<test id="s1-s1-t1" name="Problem User">
+<kw name="Open Browser To Login Page" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211213 17:34:57.595" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20211213 17:34:57.595" endtime="20211213 17:34:59.116"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211213 17:34:59.116" endtime="20211213 17:34:59.239"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211213 17:34:59.251" level="INFO">Current page contains element 'login-button'.</msg>
+<status status="PASS" starttime="20211213 17:34:59.239" endtime="20211213 17:34:59.252"/>
+</kw>
+<status status="PASS" starttime="20211213 17:34:57.595" endtime="20211213 17:34:59.252"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>problem_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 17:34:59.253" level="INFO">Typing text 'problem_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20211213 17:34:59.252" endtime="20211213 17:34:59.345"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>wrong_password</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 17:34:59.346" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20211213 17:34:59.383" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211213 17:34:59.433" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211213 17:34:59.346" endtime="20211213 17:34:59.433"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211213 17:34:59.434" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20211213 17:34:59.434" endtime="20211213 17:34:59.490"/>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211213 17:34:59.704" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211213 17:34:59.510" endtime="20211213 17:34:59.704"/>
+</kw>
+<msg timestamp="20211213 17:34:59.706" level="FAIL">Page should have contained image 'Sauce Labs Backpack' but did not.</msg>
+<status status="FAIL" starttime="20211213 17:34:59.491" endtime="20211213 17:34:59.706"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211213 17:34:59.707" endtime="20211213 17:35:01.895"/>
+</kw>
+<status status="FAIL" starttime="20211213 17:34:57.594" endtime="20211213 17:35:01.895">Page should have contained image 'Sauce Labs Backpack' but did not.</status>
+</test>
+<doc>A test suite with a single test for valid login
+
+This test follows the example using keywords
+from the selenium library</doc>
+<status status="FAIL" starttime="20211213 17:34:57.347" endtime="20211213 17:35:01.897"/>
+</suite>
+<status status="FAIL" starttime="20211213 17:34:57.319" endtime="20211213 17:35:01.899"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Valid Login">Tests.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
